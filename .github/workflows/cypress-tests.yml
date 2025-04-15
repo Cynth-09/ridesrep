@@ -14,7 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run Cypress tests
+      - name: Set up Cypress
         uses: cypress-io/github-action@v6
         with:
           install: true
+          record: true  # Enable recording to Cypress Dashboard
+          key: 1e79edda-acd2-4297-a0cd-b007e031345f  # Use the Cypress Record Key directly
