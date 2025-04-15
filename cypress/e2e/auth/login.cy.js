@@ -19,6 +19,7 @@ describe('Login Page Tests', () => {
     ln.setEmail("reet2@yopmail.com")
     ln.setPassword("12345678")
     ln.clickLogin();
+    cy.wait(5000);
     ln.verifyLogin();
     cy.get('button:nth-child(2)').eq(1).click(); //click on the settings icon to log out
     cy.get('span.nexa.font-bold.text-black').contains('SETTINGS').should('exist');
